@@ -1,0 +1,56 @@
+@import './fonts.css';
+
+.contact-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10vh 10vw 15vh 5vw;
+    border-radius: 5px;
+    font-family: 'ft88';
+  }
+  .contact-form-container h2{
+    font-family: 'ft88-italic';
+    /*text-shadow:1px 1px 10px #fff, 1px 1px 10px #ebc4c4;*/
+    font-size: 40px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column; /* Arrange label and input vertically */
+    text-align: left; /* Align label text to the left */
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: 'ft88';
+  }
+  
+  button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border-style: dotted;
+    border-color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'ft88';
+  }
+  
+  .success-message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+  }
+  

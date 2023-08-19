@@ -1,0 +1,50 @@
+/* FallingImages.css */
+.falling-images-container {
+    position: relative;
+    z-index: 999;
+  }
+  
+  .falling-image {
+    position: absolute;
+    top: -100px;
+    animation: fallAnimation 10s linear infinite;
+    cursor: pointer;
+  }
+  
+  @keyframes fallAnimation {
+    0% {
+      top: -100px;
+    }
+    100% {
+      top: calc(100vh + 100px);
+    }
+  }
+  
+  .falling-image img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .fun-fact {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+  }
+  
+  .close-button {
+    cursor: pointer;
+    font-size: 10px;
+    margin-left: auto; /* Push the close button to the right */
+    margin-bottom: auto;
+  }
+  
