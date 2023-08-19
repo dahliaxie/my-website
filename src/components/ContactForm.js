@@ -25,16 +25,27 @@ const ContactForm = () => {
     setIsSending(true);
 
     try {
-      // Replace this with your email sending logic
-      console.log('Sending email:', formData);
-      setIsSending(false);
-      setIsSent(true);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+      const response = await fetch('https://formspree.io/f/moqodvkb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      if (response.ok) {
+        setIsSending(false);
+        setIsSent(true);
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        console.error('Error sending email');
+        setIsSending(false);
+      }
     } catch (error) {
       console.error('Error sending email', error);
       setIsSending(false);
@@ -48,7 +59,7 @@ const ContactForm = () => {
         <div className="success-message">Message sent successfully!</div>
       ) : (
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
+            <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
               type="text"
