@@ -5,7 +5,6 @@ import FooterBanner from './components/FooterBanner';
 import './styles/App.css';
 import Home from './pages/Home';
 import Experience from './components/Experience';
-import FallingImages from './components/FallingImages'
 
 const App = () => {
   return (
@@ -13,7 +12,6 @@ const App = () => {
       <div className="app">
         <div className="background"></div> {/* Add this element */}
         <Header />
-        <FallingImages />
         <Routes>
           <Route path="/experience" element={<Experience />} />
           <Route path="/" element={<Home />} />
