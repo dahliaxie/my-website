@@ -1,0 +1,28 @@
+.experience-page {
+  position: relative;
+  color: #333;
+  padding: 50px 0 100px;
+  margin: 0;
+  overflow: hidden;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.experience-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-size: 100% auto;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.experience-container h2 {
+  font-family: 'louise';
+  font-size: 28px;
+  color: #333;
+}
+
+/* Apply additional styling as needed */
