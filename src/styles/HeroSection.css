@@ -1,0 +1,66 @@
+/* Hero section styles */
+.hero-section {
+  font-family: 'bzd-pearl', sans-serif;
+  position: relative;
+  color: #fff;
+  padding: 10vw 0; /* Adjust the padding to be 10% of the viewport width */
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Hide overflowing background */
+  background-color: black;
+}
+
+/* Define base font size for the entire document */
+html {
+  font-size: 16px; /* Adjust as needed */
+}
+
+/* Font size for the name */
+.name {
+  font-size: 5vw; /* Adjust based on the desired scaling */
+}
+
+/* Font size for the headline */
+.headline {
+  font-size: 4vw; /* Adjust based on the desired scaling */
+  margin-bottom: 2vw; /* Adjust based on the desired spacing */
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Font size for the subheadline */
+.subheadline {
+  font-size: 1.125rem; /* Adjust based on the desired scaling */
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 15vw 0; /* Adjust the padding to be 15% of the viewport width for smaller screens */
+  }
+
+  .name {
+    font-size: 10vw; /* Adjust based on the desired scaling for mobile */
+  }
+
+  .headline {
+    font-size: 8vw; /* Adjust based on the desired scaling for mobile */
+    margin-bottom: 3vw; /* Adjust based on the desired spacing for mobile */
+    width: 90%;
+  }
+
+  .subheadline {
+    font-size: 1.25rem; /* Adjust based on the desired scaling for mobile */
+  }
+}
+
+/* Button styles */
+.cta-button {
+  background-color: #333;
+  color: #fff;
+  padding: 2vw 4vw; /* Use percentage-based padding */
+  border: none;
+  cursor: pointer;
+}
