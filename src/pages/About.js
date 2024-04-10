@@ -2,8 +2,8 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div>
-      <h2>About Page</h2>
+    
+    <div className= "about">
       {/* Add information about yourself here */}
       <div style={{ fontFamily: 'jgs, sans-serif' }}>Lorem ipsum dolor sit amet (jgs)</div>
       <div style={{ fontFamily: 'jgs-bold, sans-serif' }}>Consectetur adipiscing elit (jgs-bold)</div>

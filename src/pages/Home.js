@@ -1,5 +1,4 @@
 import React from 'react';
-import MusicPlayer from '../components/MusicPlayer';
 import HeroSection from '../components/HeroSection';
 //import VisitorCounter from '../components/VisitorCounter';
 const Home = () => {

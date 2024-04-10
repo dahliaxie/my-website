@@ -1,20 +1,29 @@
 .experience-item {
-  /*
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 35px;
-    line-height: 1.75; /* Set a consistent line height for text */
-  }
-  
-  .experience-title {
-    font-size: 20px;
-  }
-  
-  .experience-date {
-    font-style: italic;
-  }
-  
-  .responsibilities {
-    font-size: 16px;
-  }
-  
+  margin-bottom: 2rem; /* Add space between experience entries */
+  padding: 1rem;
+  color: white;
+}
+
+.experience-item h3,
+.experience-item h4 {
+  margin: 0; /* Remove default margins */
+}
+
+.experience-item h3 {
+  font-size: 1.8rem; /* Adjust title size */
+}
+
+.experience-item h4 {
+  font-size: 1.2rem; /* Adjust company and date size */
+  color: #888; /* Lighter color for company and date */
+}
+
+.experience-item ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Reset padding */
+  margin: 1rem 0; /* Add space before and after the list */
+}
+
+.experience-item li {
+  margin-bottom: 0.5rem; /* Add space between list items */
+}

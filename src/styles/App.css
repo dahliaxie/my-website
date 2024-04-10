@@ -5,6 +5,7 @@
 body {
   background-color: black;
   font-family: 'roboto', sans-serif;
+  color: white;
 }
 .App {
   text-align: center;
@@ -42,4 +43,9 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.about {
+  margin-top: 5rem;
+  margin-left: 2rem;
 }

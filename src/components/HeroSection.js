@@ -5,7 +5,7 @@ const HeroSection = () => {
   const [text, setText] = useState('');
   const [showCursor, setShowCursor] = useState(false);
   const name = 'Dahlia Xie';
-  const sentence = 'is a Software Engineer based out of Seattle, Washington';
+  const sentence = 'is a Software Engineer based out of Seattle, Washington.';
   const typingSpeed = 100; // Typing speed in milliseconds
 
   useEffect(() => {
