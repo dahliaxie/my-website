@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-#build revert to a2b002690ecc44ca5a0320985cf93418941c205e
-
+#build
+/build
 # misc
 .DS_Store
 .env.local
