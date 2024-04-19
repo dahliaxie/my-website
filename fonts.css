@@ -3,151 +3,151 @@
 /* Import the font files using relative paths */
 @font-face {
     font-family: 'jgs';
-    src: url('../fonts/jgs5.ttf') format('truetype');
+    src: url('build/static/media//jgs5.ttf') format('truetype');
     /* Add more src lines for different font formats (e.g., woff, woff2) */
   }
 @font-face {
   font-family: 'jgs-bold';
-  src: url('../fonts/jgs7.ttf') format('truetype');
+  src: url('build/static/media//jgs7.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'abordage';
-  src: url('../fonts/Abordage-Regular.ttf') format('truetype');
+  src: url('build/static/media//Abordage-Regular.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
 font-family: 'basalte-fond';
-src: url('../fonts/Basalte-Fond.ttf') format('truetype');
+src: url('build/static/media//Basalte-Fond.ttf') format('truetype');
 /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'basalte-multicolor';
-  src: url('../fonts/Basalte-Multicolor.ttf') format('truetype');
+  src: url('build/static/media//Basalte-Multicolor.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
 font-family: 'basalte-volume';
-src: url('../fonts/Basalte-Volume.ttf') format('truetype');
+src: url('build/static/media//Basalte-Volume.ttf') format('truetype');
 /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'director-bold';
-  src: url('../fonts/Director-bold.ttf') format('truetype');
+  src: url('build/static/media//Director-bold.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
 font-family: 'director-light';
-src: url('../fonts/Director-Light.ttf') format('truetype');
+src: url('build/static/media//Director-Light.ttf') format('truetype');
 /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'director-regular';
-  src: url('../fonts/Director-Regular.ttf') format('truetype');
+  src: url('build/static/media//Director-Regular.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
 font-family: 'director-variable';
-src: url('../fonts/Director-Variable.ttf') format('truetype');
+src: url('build/static/media//Director-Variable.ttf') format('truetype');
 /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'equateur';
-  src: url('../fonts/Equateur-Regular.ttf') format('truetype');
+  src: url('build/static/media//Equateur-Regular.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
 font-family: 'ft88-bold';
-src: url('../fonts/FT88-Bold.ttf') format('truetype');
+src: url('build/static/media//FT88-Bold.ttf') format('truetype');
 /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'ft88-expanded';
-  src: url('../fonts/FT88-Expanded.ttf') format('truetype');
+  src: url('build/static/media//FT88-Expanded.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
 font-family: 'ft88-gothique';
-src: url('../fonts/FT88-Gothique.ttf') format('truetype');
+src: url('build/static/media//FT88-Gothique.ttf') format('truetype');
 /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
 font-family: 'ft88-italic';
-src: url('../fonts/FT88-Italic.ttf') format('truetype');
+src: url('build/static/media//FT88-Italic.ttf') format('truetype');
 /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'ft88';
-  src: url('../fonts/FT88-Regular.ttf') format('truetype');
+  src: url('build/static/media//FT88-Regular.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
 font-family: 'ft88-school';
-src: url('../fonts/FT88-School.ttf') format('truetype');
+src: url('build/static/media//FT88-School.ttf') format('truetype');
 /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'ft88-serif';
-  src: url('../fonts/FT88-Serif.ttf') format('truetype');
+  src: url('build/static/media//FT88-Serif.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
 font-family: 'latitude';
-src: url('../fonts/Latitude-Regular.ttf') format('truetype');
+src: url('build/static/media//Latitude-Regular.ttf') format('truetype');
 /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'louise';
-  src: url('../fonts/Louise-Regular.ttf') format('truetype');
+  src: url('build/static/media//Louise-Regular.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'bzd-base';
-  src: url('../fonts/bianzhidai_noBG-Base.woff') format('woff');
+  src: url('build/static/media//bianzhidai_noBG-Base.woff') format('woff');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
     font-family: 'bzd-brush';
-    src: url('../fonts/bianzhidai_noBG-Brush.woff') format('woff');
+    src: url('build/static/media//bianzhidai_noBG-Brush.woff') format('woff');
     /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'bzd-bubble';
-  src: url('../fonts/bianzhidai_noBG-Bubble.woff') format('woff');
+  src: url('build/static/media//bianzhidai_noBG-Bubble.woff') format('woff');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
     font-family: 'bzd-cloud';
-    src: url('../fonts/bianzhidai_noBG-Cloud.woff') format('woff');
+    src: url('build/static/media//bianzhidai_noBG-Cloud.woff') format('woff');
     /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'bzd-cube';
-  src: url('../fonts/bianzhidai_noBG-Cube.woff') format('woff');
+  src: url('build/static/media//bianzhidai_noBG-Cube.woff') format('woff');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
     font-family: 'bzd-messier';
-    src: url('../fonts/bianzhidai_noBG-Messier.woff') format('woff');
+    src: url('build/static/media/bianzhidai_noBG-Messier.woff') format('woff');
     /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'bzd-messy';
-  src: url('../fonts/bianzhidai_noBG-Messy.woff') format('woff');
+  src: url('build/static/media//bianzhidai_noBG-Messy.woff') format('woff');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
     font-family: 'bzd-pearl';
-    src: url('../fonts/bianzhidai_noBG-Pearl.woff') format('woff');
+    src: url('build/static/media//bianzhidai_noBG-Pearl.woff') format('woff');
     /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
   font-family: 'bzd-ring';
-  src: url('../fonts/bianzhidai_noBG-Ring.woff') format('woff');
+  src: url('build/static/media//bianzhidai_noBG-Ring.woff') format('woff');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
     font-family: 'bzd-stitches';
-    src: url('../fonts/bianzhidai_noBG-Stitches.woff') format('woff');
+    src: url('build/static/media//bianzhidai_noBG-Stitches.woff') format('woff');
     /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
