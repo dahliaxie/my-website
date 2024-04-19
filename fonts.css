@@ -18,7 +18,7 @@
 }
 @font-face {
 font-family: 'basalte-fond';
-src: url('build/static/media/Basalte-Fond.8424a56dcaa1ea683e49.ttf format('truetype');
+src: url('build/static/media/Basalte-Fond.8424a56dcaa1ea683e49.ttf;') format('truetype');
 /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 @font-face {
