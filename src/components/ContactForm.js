@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -6,7 +7,7 @@ const ContactForm = () => {
     email: '',
     message: '',
   });
-  const [isSubmitted, setIsSubmitted] = useState(false); // State to track form submission
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -15,20 +16,27 @@ const ContactForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Submit the form
-    // You can use Netlify's form submission handling or your own server-side logic here
-    // For Netlify forms, simply submit the form without any additional JavaScript handling
-
-    console.log('Form Submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitted(true); // Set the state to true after form submission
+    // Send email using email.js
+    emailjs.sendForm(
+      'service_kw8i26z', // Service ID
+      'template_mgcn7ej', // Template ID
+      event.target, // HTML form element
+      'OyQ_qFx9ZwLHQ596T' // public key
+    )
+    .then((response) => {
+      console.log('Email sent successfully:', response);
+      setFormData({ name: '', email: '', message: '' });
+      setIsSubmitted(true);
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error);
+    });
   };
 
   return (
     <div>
-      {!isSubmitted ? ( // Render the form if not submitted
-        <form onSubmit={handleSubmit} className="contact-form" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" /> {/* Hidden form name field */}
+      {!isSubmitted ? (
+        <form onSubmit={handleSubmit} className="contact-form">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -61,7 +69,6 @@ const ContactForm = () => {
           <button type="submit">Send Message</button>
         </form>
       ) : (
-        // Render the confirmation message if submitted
         <p>Thank you for your message! I will get back to you soon.</p>
       )}
     </div>
