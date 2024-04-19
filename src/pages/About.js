@@ -1,10 +1,20 @@
-import React from 'react';
-
+import React, {useEffect} from 'react';
+import Wip from '../components/Wip'
 const About = () => {
+  useEffect(() => {
+    // Disable scroll on component mount
+    document.body.style.overflow = 'hidden';
+
+    // Cleanup: Allow scroll on unmount
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
   return (
-    
     <div className= "about">
-      {/* Add information about yourself here */}
+      <Wip/>
+      {/* Add information about yourself here
+
       <div style={{ fontFamily: 'jgs, sans-serif' }}>Lorem ipsum dolor sit amet (jgs)</div>
       <div style={{ fontFamily: 'jgs-bold, sans-serif' }}>Consectetur adipiscing elit (jgs-bold)</div>
       <div style={{ fontFamily: 'abordage, sans-serif' }}>Sed do eiusmod tempor incididunt (abordage)</div>
@@ -35,6 +45,7 @@ const About = () => {
       <div style={{ fontFamily: 'bzd-pearl, sans-serif' }}>Sunt in culpa qui officia deserunt (bzd-pearl)</div>
       <div style={{ fontFamily: 'bzd-ring, sans-serif' }}>Mollit anim id est laborum (bzd-ring)</div>
       <div style={{ fontFamily: 'bzd-stitches, sans-serif' }}>Lorem ipsum dolor sit amet (bzd-stitches)</div>
+      */}
     </div>
   );
 };
