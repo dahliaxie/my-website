@@ -17,25 +17,26 @@ const ContactForm = () => {
     event.preventDefault();
 
     // Send email using email.js
-    emailjs.sendForm(
-      'service_kw8i26z', // Service ID
-      'template_mgcn7ej', // Template ID
-      event.target, // HTML form element
-      'OyQ_qFx9ZwLHQ596T' // public key
-    )
-    .then((response) => {
-      console.log('Email sent successfully:', response);
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitted(true);
-    })
-    .catch((error) => {
-      console.error('Error sending email:', error);
-    });
+    emailjs
+      .sendForm(
+        'service_kw8i26z', // Service ID
+        'template_mgcn7ej', // Template ID
+        event.target, // HTML form element
+        'OyQ_qFx9ZwLHQ596T' // public key
+      )
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        setFormData({ name: '', email: '', message: '' });
+        setIsSubmitted(true);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
   };
 
   return (
     <div>
-      {!isSubmitted ? (
+      {!isSubmitted && (
         <form onSubmit={handleSubmit} className="contact-form">
           <label htmlFor="name">Name:</label>
           <input
@@ -68,9 +69,8 @@ const ContactForm = () => {
 
           <button type="submit">Send Message</button>
         </form>
-      ) : (
-        <p>Thank you for your message! I will get back to you soon.</p>
       )}
+      {isSubmitted && <p>Thank you for your message! I will get back to you soon.</p>}
     </div>
   );
 };

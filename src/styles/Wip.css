@@ -7,7 +7,7 @@
   
   .wip-text {
     font-family: 'bzd-bubble', sans-serif;
-    font-size: 5rem; /* Adjust font size as desired */
+    font-size: 5vw; /* Adjust font size as desired */
     color: #656565; /* Text color (optional) */
   }
   
@@ -20,3 +20,8 @@
     50% { visibility: visible; }
   }
   
+  @media (max-width: 768px) {
+    .wip-text {
+      font-size: 8vw; /* Adjust font size as desired */
+    }
+  }

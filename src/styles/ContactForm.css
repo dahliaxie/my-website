@@ -1,51 +1,57 @@
-
 /* Parent container styles (assuming a separate container) */
 .contact {
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Horizontally center content (optional) */
-    align-items: center; /* Vertically center content (optional) */
-    min-height: 100vh; /* Optional: Set minimum height for viewport coverage */
-  }
-.contact p, h2{
-    font-family: 'ft88-serif', sans-serif;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Horizontally center content (optional) */
+  align-items: center; /* Vertically center content (optional) */
+  min-height: 100vh; /* Optional: Set minimum height for viewport coverage */
 }
-  
-  /* Existing styles for .contact-form */
-  .contact-form {
-    font-family: 'ft88';
-    background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Inner padding */
-    margin: 0 auto; /* Center the form horizontally */
-    max-width: 500px; /* Optional: Set a maximum width */
+.contact p,
+.contact h2 {
+  font-family: 'ft88-serif', sans-serif;
+}
+
+/* Existing styles for .contact-form */
+.contact-form {
+  font-family: 'ft88';
+  background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  margin: 0 auto; /* Center the form horizontally */
+  max-width: 500px; /* Optional: Set a maximum width */
+}
+
+.contact-form label {
+  display: block; /* Labels on new lines */
+  margin-bottom: 5px; /* Spacing between labels and inputs */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Full width for inputs and textarea */
+  padding: 10px;
+  border: 1px solid #ddd; /* Border for inputs and textarea */
+  border-radius: 5px; /* Rounded corners for inputs and textarea */
+  margin-bottom: 15px; /* Spacing between elements */
+}
+
+.contact-form textarea {
+  height: 150px; /* Set a height for the textarea */
+}
+
+.contact-form button {
+  font-family: 'ft88';
+  background-color: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Indicate clickable behavior */
+}
+
+@media screen and (max-width: 768px) {
+  .contact p, .contact h2 {
+    padding-left: 20px; /* Padding on the left side */
+    padding-right: 20px; /* Padding on the right side */
   }
-  
-  .contact-form label {
-    display: block; /* Labels on new lines */
-    margin-bottom: 5px; /* Spacing between labels and inputs */
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%; /* Full width for inputs and textarea */
-    padding: 10px;
-    border: 1px solid #ddd; /* Border for inputs and textarea */
-    border-radius: 5px; /* Rounded corners for inputs and textarea */
-    margin-bottom: 15px; /* Spacing between elements */
-  }
-  
-  .contact-form textarea {
-    height: 150px; /* Set a height for the textarea */
-  }
-  
-  .contact-form button {
-    font-family: 'ft88';
-    background-color: #333; /* Button background color */
-    color: #fff; /* Button text color */
-    padding: 10px 20px; /* Button padding */
-    border: none; /* Remove default button border */
-    border-radius: 5px; /* Rounded corners for button */
-    cursor: pointer; /* Indicate clickable behavior */
-  }
-  
+}
