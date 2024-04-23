@@ -12,7 +12,7 @@ const Wip = ({ message = 'Work in Progress...' }) => {
     return () => clearInterval(blinkingInterval);
   }, []); // Only run effect on component mount
 
-  return (
+  return ( 
     <div className="wip-container">
       <p className="wip-text">{message}<span style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span></p>
     </div>

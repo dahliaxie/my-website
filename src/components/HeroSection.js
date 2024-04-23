@@ -11,7 +11,7 @@ const HeroSection = () => {
   useEffect(() => {
     let index = 0;
     let currentText = '';
-
+ 
     const type = () => {
       currentText = sentence.substring(0, index + 1);
       setText(currentText);
