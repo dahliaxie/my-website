@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import Wip from '../components/Wip'
+import ASCIIAnimation from '../components/ASCIIAnimation';
 const About = () => {
   useEffect(() => {
     // Disable scroll on component mount
@@ -12,7 +13,10 @@ const About = () => {
   }, []);
   return (
     <div className= "about">
+      <ASCIIAnimation videoPath="../videos/eye.mp4" fps={24} pixels="......" charsWidth={100}/>
       <Wip/>
+
+      
       {/* Add information about yourself here
 
       <div style={{ fontFamily: 'jgs, sans-serif' }}>Lorem ipsum dolor sit amet (jgs)</div>

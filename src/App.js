@@ -7,7 +7,8 @@ import './styles/App.css';
 import Home from './pages/Home';
 import Experience from './pages/Experience';
 import Contact from './pages/Contact'
-
+import Sample from './pages/Sample'
+import Test from './pages/Test.js';
 const App = () => {
   return (
     <Router>
@@ -17,6 +18,8 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/sample" element={<Sample />} />
+          <Route path="/test" element={<Test />} />
           <Route path="/" element={<Home />} />
           {/* Add more routes for other pages */}
         </Routes>
