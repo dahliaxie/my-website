@@ -3,13 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.0",
-    "@babel/plugin-transform-private-property-in-object": "^7.24.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "babel": "^6.23.0",
-    "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^10.15.1",
     "gif.js": "^0.2.0",
@@ -23,12 +20,13 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -b v2",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "homepage": "https://dahliaxie.github.io/"
+    "homepage": "https://dahliaxie.github.io/",
+    "postbuild": "copy .\\src\\app.js .\\build\\app.js"
   },
   "eslintConfig": {
     "extends": [
