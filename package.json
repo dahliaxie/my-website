@@ -8,22 +8,15 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
     "babel": "^6.23.0",
-=======
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
->>>>>>> ae98be39818bfc8a6b23ef7d34396dd5ec136174
     "framer-motion": "^10.15.1",
     "gif.js": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-parallax-mouse": "^2.1.0",
-<<<<<<< HEAD
     "react-router-dom": "^6.23.1",
-=======
-    "react-router-dom": "^6.22.3",
->>>>>>> ae98be39818bfc8a6b23ef7d34396dd5ec136174
     "react-scripts": "5.0.1",
     "styled-components": "^6.0.7",
     "web-vitals": "^2.1.4"
@@ -56,12 +49,7 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.1.1"
-=======
-    "gh-pages": "^6.1.1",
-    "tar": "^7.0.1"
->>>>>>> ae98be39818bfc8a6b23ef7d34396dd5ec136174
   }
 }
