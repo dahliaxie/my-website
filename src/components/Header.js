@@ -12,7 +12,7 @@ const Header = () => {
       const visible = currentScrollPos <= 0 || prevScrollPos > currentScrollPos;
       setPrevScrollPos(currentScrollPos);
       setVisible(visible);
-    };
+    }; 
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);

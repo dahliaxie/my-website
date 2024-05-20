@@ -11,5 +11,5 @@ const FooterBanner = () => {
     </div>
   );
 };
-
+ 
 export default FooterBanner;

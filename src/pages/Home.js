@@ -7,9 +7,6 @@ const Home = () => {
       <div className="home">
         {/* Add your content here */}
         <HeroSection/>
-        {/* Conditionally render the MusicPlayer component 
-                <VisitorCounter/>
-                */}
 
       </div>
     );

@@ -39,4 +39,9 @@
     opacity: 1;
   }
 }
+@media (max-width: 768px) {
+  .experience-text {
+    font-size: 4vw; /* Adjust font size as desired */
+  }
+}
 
