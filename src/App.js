@@ -18,8 +18,8 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/sample" element={<Sample />} />
-          <Route path="/test" element={<Test />} />
+          <Route path="/v1" element={<Sample />} />
+          <Route path="/v2" element={<Test />} />
           <Route path="/" element={<Home />} />
           {/* Add more routes for other pages */}
         </Routes>

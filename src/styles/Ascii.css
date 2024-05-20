@@ -16,7 +16,7 @@
 }
 
 .loading {
-    padding-top: 7%;
+    padding-top: 30%;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
@@ -24,6 +24,7 @@
     justify-content: center;
     height: 100%;
 }
+
 
 /* Adjustments for smaller screens */
 @media (max-width: 600px) {
@@ -35,6 +36,10 @@
     .loading {
         font-size: 4vw;
     }
+    .loading img {
+        max-width: 50%;
+        max-height: 50%;
+    }
 }
 
 @media (max-width: 400px) {
@@ -45,5 +50,9 @@
 
     .loading {
         font-size: 3vw;
+    }
+    .loading img {
+        max-width: 25%;
+        max-height: 25%;
     }
 }

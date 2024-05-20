@@ -13,7 +13,6 @@ const About = () => {
   }, []);
   return (
     <div className= "about">
-      <ASCIIAnimation videoPath="../videos/eye.mp4" fps={24} pixels="......" charsWidth={100}/>
       <Wip/>
 
       
