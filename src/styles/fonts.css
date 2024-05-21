@@ -52,8 +52,3 @@ src: url('../fonts/Latitude-Regular.ttf') format('truetype');
   /* Add more src lines for different font formats (e.g., woff, woff2) */
 }
 
-@font-face {
-    font-family: 'bzd-pearl';
-    src: url('../fonts/bianzhidai_noBG-Pearl.woff') format('woff');
-    /* Add more src lines for different font formats (e.g., woff, woff2) */
-}
