@@ -2,22 +2,24 @@
 .contact {
   display: flex; /* Enable flexbox */
   flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Horizontally center content (optional) */
+  justify-content: center; /* Horizontally center content */
   align-items: center; /* Vertically center content (optional) */
   min-height: 100vh; /* Optional: Set minimum height for viewport coverage */
-}
-.contact p,
-.contact h2 {
+
+  /* Text styles for .contact */
   font-family: 'ft88-serif', sans-serif;
+  text-align: center;
+  padding: 1rem 2rem; /* Equal left and right padding */
+  white-space: wrap;
+  line-height: 1.5;
 }
 
-/* Existing styles for .contact-form */
+/* Styles for .contact-form */
 .contact-form {
   font-family: 'ft88';
   background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
   border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Inner padding */
-  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Inner padding with equal left and right */
   max-width: 500px; /* Optional: Set a maximum width */
 }
 
@@ -49,9 +51,10 @@
   cursor: pointer; /* Indicate clickable behavior */
 }
 
-@media screen and (max-width: 768px) {
-  .contact p, .contact h2 {
-    padding-left: 20px; /* Padding on the left side */
-    padding-right: 20px; /* Padding on the right side */
+/* Media queries for responsive adjustments (optional) */
+@media (max-width: 768px) {
+  .contact-form {
+    font-size: 14px; /* Reduce font size for mobile */
+    margin-bottom: 30px; /* Add some spacing below the form on mobile */
   }
 }
