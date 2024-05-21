@@ -1,0 +1,47 @@
+.experience-page {
+  font-family: 'roboto', sans-serif;
+  padding-top: 4rem; /* More space at the top */
+  padding-bottom: 1rem; /* Less space at the bottom */
+  padding-left: 2rem; /* Maintain left padding */
+  padding-right: 2rem; /* Maintain right padding */
+}
+
+.experience-text {
+
+  font-size: 2.6vw; /* Adjust font size */
+  line-height: 1.5; /* Adjust line height */
+  color: white; /* Adjust text color */
+}
+
+.experience-text a {
+  color: white; /* Adjust company link color */
+  border-bottom: 1px solid inherit; /* Inherit color from text */
+  /* Remove padding to avoid pushing text down */
+  padding-bottom: 0;
+}
+
+.experience-text a:hover {
+  border-bottom-color: blue; /* Change underline color on hover */
+  color: #007bff; /* Change text color on hover */
+  transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out; /* Transition both text and border color */
+}
+
+.cursor {
+  animation: blink 0.5s infinite alternate;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .experience-text {
+    font-size: 4vw; /* Adjust font size as desired */
+  }
+}
+

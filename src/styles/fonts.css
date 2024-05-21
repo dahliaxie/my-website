@@ -1,0 +1,59 @@
+/* src/styles/fonts.css */
+
+/* Import the font files using relative paths */
+@font-face {
+    font-family: 'jgs';
+    src: url('../fonts/jgs5.ttf') format('truetype');
+    /* Add more src lines for different font formats (e.g., woff, woff2) */
+  }
+@font-face {
+  font-family: 'jgs-bold';
+  src: url('../fonts/jgs7.ttf') format('truetype');
+  /* Add more src lines for different font formats (e.g., woff, woff2) */
+}
+@font-face {
+font-family: 'ft88-bold';
+src: url('../fonts/FT88-Bold.ttf') format('truetype');
+/* Add more src lines for different font formats (e.g., woff, woff2) */
+}
+@font-face {
+font-family: 'ft88-italic';
+src: url('../fonts/FT88-Italic.ttf') format('truetype');
+/* Add more src lines for different font formats (e.g., woff, woff2) */
+}
+@font-face {
+  font-family: 'ft88';
+  src: url('../fonts/FT88-Regular.ttf') format('truetype');
+  /* Add more src lines for different font formats (e.g., woff, woff2) */
+}
+@font-face {
+font-family: 'ft88-school';
+src: url('../fonts/FT88-School.ttf') format('truetype');
+/* Add more src lines for different font formats (e.g., woff, woff2) */
+}
+@font-face {
+  font-family: 'ft88-serif';
+  src: url('../fonts/FT88-Serif.ttf') format('truetype');
+  /* Add more src lines for different font formats (e.g., woff, woff2) */
+}
+@font-face {
+font-family: 'latitude';
+src: url('../fonts/Latitude-Regular.ttf') format('truetype');
+/* Add more src lines for different font formats (e.g., woff, woff2) */
+}
+@font-face {
+  font-family: 'louise';
+  src: url('../fonts/Louise-Regular.ttf') format('truetype');
+  /* Add more src lines for different font formats (e.g., woff, woff2) */
+}
+@font-face {
+  font-family: 'bzd-bubble';
+  src: url('../fonts/bianzhidai_noBG-Bubble.woff') format('woff');
+  /* Add more src lines for different font formats (e.g., woff, woff2) */
+}
+
+@font-face {
+    font-family: 'bzd-pearl';
+    src: url('../fonts/bianzhidai_noBG-Pearl.woff') format('woff');
+    /* Add more src lines for different font formats (e.g., woff, woff2) */
+}
