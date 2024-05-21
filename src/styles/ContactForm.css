@@ -5,11 +5,15 @@
   justify-content: center; /* Horizontally center content (optional) */
   align-items: center; /* Vertically center content (optional) */
   min-height: 100vh; /* Optional: Set minimum height for viewport coverage */
-}
-.contact p,
-.contact h2 {
+
+  /* Add text styles to .contact */
   font-family: 'ft88-serif', sans-serif;
+  text-align: center;
+  padding: 1rem 2rem;
+  white-space: wrap;
+  line-height: 1.5;
 }
+
 
 /* Existing styles for .contact-form */
 .contact-form {
@@ -17,7 +21,8 @@
   background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Inner padding */
-  margin: 0 auto; /* Center the form horizontally */
+  /* Remove margin for centering within .contact */
+  margin: 0;
   max-width: 500px; /* Optional: Set a maximum width */
 }
 
@@ -49,9 +54,19 @@
   cursor: pointer; /* Indicate clickable behavior */
 }
 
-@media screen and (max-width: 768px) {
-  .contact p, .contact h2 {
-    padding-left: 20px; /* Padding on the left side */
-    padding-right: 20px; /* Padding on the right side */
+@media (max-width: 768px) {
+  .contact-form {
+    /* Adjust styles for mobile */
+    font-size: 14px; /* Reduce font size for better readability */
+    margin-bottom: 30px; /* Add some spacing below the form on mobile */
+  }
+
+  .contact-form label {
+    font-size: 16px; /* Adjust label font size for mobile */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 8px; /* Reduce input/textarea padding for smaller screens */
   }
 }
