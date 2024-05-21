@@ -1,0 +1,53 @@
+/* Default styles */
+.header {
+  font-size: 3vw; /* Use viewport width for scalable font size */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%; /* Use percentage for padding */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.5s ease-in-out; /* Add a transition effect */
+  z-index: 1; /* Set a higher z-index to ensure it appears above other content */
+}
+
+.nav {
+  display: flex;
+  gap: 2vw; /* Use viewport width for scalable gap */
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hidden {
+  top: -100px; /* Adjust the value to hide the header completely */
+}
+
+.contact-button {
+  margin-right: 5%; /* Use percentage for margin */
+}
+
+.button {
+  padding: 2% 4%; /* Use percentage for padding */
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px; /* Set a larger border radius for a round oval */
+  transition: background-color 0.3s ease-in-out; /* Add a transition effect for hover */
+  border: none; /* Remove the border */
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 4vw; /* Increase font size for smaller screens */
+  }
+}
