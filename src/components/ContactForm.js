@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import '../styles/ContactForm.css'; // Import your CSS file
+import { FaFilePdf } from 'react-icons/fa';
+import '../styles/ContactForm.css';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -17,13 +18,12 @@ const ContactForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Send email using email.js
     emailjs
       .sendForm(
-        'service_kw8i26z', // Service ID
-        'template_mgcn7ej', // Template ID
-        event.target, // HTML form element
-        'OyQ_qFx9ZwLHQ596T' // public key
+        'service_kw8i26z',
+        'template_mgcn7ej',
+        event.target,
+        'OyQ_qFx9ZwLHQ596T'
       )
       .then((response) => {
         console.log('Email sent successfully:', response);
@@ -33,6 +33,10 @@ const ContactForm = () => {
       .catch((error) => {
         console.error('Error sending email:', error);
       });
+  };
+
+  const handleViewResume = () => {
+    window.open('/Xie_Dahlia_Resume.pdf', '_blank');
   };
 
   return (
@@ -68,7 +72,12 @@ const ContactForm = () => {
             required
           />
 
-          <button type="submit">submit!</button>
+          <div className="button-container">
+            <button type="submit" className="submit-button">submit</button>
+            <button type="button" className="resume-button" onClick={handleViewResume}>
+              view resume <FaFilePdf />
+            </button>
+          </div>
         </form>
       )}
       {isSubmitted && <p className="submission-message">thank you for your message! i will get back to you soon.</p>}

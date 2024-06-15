@@ -7,6 +7,7 @@
   justify-content: center;
   min-height: 100vh; /* Ensures full viewport height */
   background-color: black;
+  margin-bottom: 5%;
 }
 
 .experience-text {
