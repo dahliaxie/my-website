@@ -1,34 +1,39 @@
-/* Default styles */
+/* Header container styles */
 .header {
-  font-size: 3vw; /* Use viewport width for scalable font size */
+  font-size: 3vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2%; /* Use percentage for padding */
+  padding: 0% 1%;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  transition: top 0.5s ease-in-out; /* Add a transition effect */
-  z-index: 1; /* Set a higher z-index to ensure it appears above other content */
+  transition: top 0.5s ease-in-out;
+  z-index: 1000; /* Ensure header is above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
 }
 
+/* Navigation links */
 .nav {
   display: flex;
-  gap: 2vw; /* Use viewport width for scalable gap */
+  gap: 2vw;
 }
 
-.nav a {
+.nav-item {
   color: #fff;
   text-decoration: none;
+  padding: 1rem; /* Padding around each link */
+  transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
 }
 
-.hidden {
-  top: -100px; /* Adjust the value to hide the header completely */
+.nav-item:hover {
+  transform: translateY(-3px); /* Move link up on hover */
 }
 
+/* Contact button */
 .contact-button {
-  margin-right: 5%; /* Use percentage for margin */
+  margin-right: 5%;
 }
 
 .button {
@@ -45,9 +50,7 @@
   background-color: #555;
 }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  .header {
-    font-size: 4vw; /* Increase font size for smaller screens */
-  }
+/* Hidden state */
+.hidden {
+  top: -100px; /* Slide header out of view */
 }

@@ -9,6 +9,8 @@
 @import './HeroSection.css';
 @import './Sample.css';
 @import './Wip.css';
+@import './tailwind.css';
+
 
 body {
   margin: 0;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Experience.css'; // Adjust the path as needed
+import '../styles/Experience.css';
+
 const fullExperienceText = `
   From childhood Neopets user page customization to building real-world tech, a B.S. in Software 
   Engineering and minor in Digital Technology fueled my passion to bridge the gap 
@@ -12,7 +13,21 @@ const fullExperienceText = `
   worked on personal projects including a pedestrian detection model, a mobile weather 
   application, in addition to getting AWS Cloud Practitioner certified in March 2024. 
   I am excited to learn more about the evolving tech space while applying my background
-  to build innovative solutions.
+  to build human-centered products.
+`;
+
+const newText = `
+from childhood neopets user page customization to earning a b.s. in software engineering 
+with a minor in digital technology and culture, my passion has always been bridging the 
+gap between code and design. i began my internship journey at eagleview, developing a 
+health check monitor for microservices. at liberty mutual, i created a landing page and 
+icons for their mainframe team, followed by building a client portal at chase cost management 
+to visualize savings data. at poatek, i automated client project tracking, and at 
+inward, i optimized website responsiveness for higher conversion rates. since graduating, 
+i've pursued personal projects such as a pedestrian detection model and a mobile weather 
+application, alongside achieving aws cloud practitioner certification in march 2024. i'm 
+excited to continue evolving in the tech landscape, leveraging my skills to craft 
+user-centric products.
 `;
 
 const Experience = () => {
@@ -24,25 +39,18 @@ const Experience = () => {
     return () => clearTimeout(timeoutId);
   }, []);
 
-  const withCompanyLinks = fullExperienceText.replace(
-    /Neopets|Eagleview|Liberty Mutual|Chase Cost Management|Poatek IT Consulting|Inward/g,
+  const withCompanyLinks = newText.replace(
+    /neopets|eagleview|liberty mutual|chase cost management|poatek|inward/g,
     (match) => {
-      switch (match) {
-        case 'Neopets':
-          return `<u><a href="https://www.neopets.com/"target="_blank">Neopets</a></u>`;
-        case 'Eagleview':
-          return `<u><a href="https://www.eagleview.com/"target="_blank">Eagleview</a></u>`;
-        case 'Liberty Mutual':
-          return `<u><a href="https://www.libertymutual.com/"target="_blank">Liberty Mutual</a></u>`;
-        case 'Chase Cost Management':
-          return `<u><a href="https://www.ccmchase.com/"target="_blank">Chase Cost Management</a></u>`;
-        case 'Poatek IT Consulting':
-          return `<u><a href="https://www.poatek.com/"target="_blank">Poatek IT Consulting</a></u>`;
-        case 'Inward':
-          return `<u><a href="https://www.joininward.com/"target="_blank">Inward</a></u>`;
-        default:
-          return match; // Handle unexpected matches (optional)
-      }
+      const links = {
+        'neopets': 'https://www.neopets.com/',
+        'eagleview': 'https://www.eagleview.com/',
+        'liberty mutual': 'https://www.libertymutual.com/',
+        'chase cost management': 'https://www.ccmchase.com/',
+        'poatek': 'https://www.poatek.com/',
+        'inward': 'https://www.joininward.com/'
+      };
+      return `<u><a href="${links[match]}" target="_blank">${match}</a></u>`;
     }
   );
 

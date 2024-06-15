@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/HeroSection.css';
 
 const HeroSection = () => {
   const [text, setText] = useState('');
   const [showCursor, setShowCursor] = useState(false);
-  const name = 'Dahlia Xie';
-  const sentence = 'is a Software Engineer based out of Seattle, Washington.';
+  const sentence = 'dahlia xie is a software engineer based out of seattle, washington.';
   const typingSpeed = 100; // Typing speed in milliseconds
 
   useEffect(() => {
     let index = 0;
     let currentText = '';
- 
+
     const type = () => {
       currentText = sentence.substring(0, index + 1);
       setText(currentText);
@@ -38,8 +36,8 @@ const HeroSection = () => {
   return (
     <section className="hero-section">
       <h1 className="headline">
-        <span className="name">{name}</span> {text}
-        <span style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span>
+        {text}
+        <span className={`${showCursor ? 'inline' : 'hidden'} animate-blink`}>|</span>
       </h1>
     </section>
   );

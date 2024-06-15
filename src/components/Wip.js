@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Wip.css'
 
-const Wip = ({ message = 'Work in Progress...' }) => {
+const Wip = ({ message = 'work in progress...' }) => {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {

@@ -12,7 +12,7 @@ const Header = () => {
       const visible = currentScrollPos <= 0 || prevScrollPos > currentScrollPos;
       setPrevScrollPos(currentScrollPos);
       setVisible(visible);
-    }; 
+    };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -21,12 +21,12 @@ const Header = () => {
   return (
     <header className={`header ${visible ? 'visible' : 'hidden'}`}>
       <nav className="nav">
-        <Link to="/">Home</Link>
-        <Link to="/experience">Experience</Link>
-        <Link to="/about">About</Link>
+        <Link to="/" className="nav-item">home</Link>
+        <Link to="/experience" className="nav-item">experience</Link>
+        <Link to="/about" className="nav-item">about</Link>
       </nav>
       <div className="contact-button">
-        <Link to="/contact" className="button">Contact</Link> {/* Add className "button" */}
+        <Link to="/contact" className="button">contact</Link>
       </div>
     </header>
   );

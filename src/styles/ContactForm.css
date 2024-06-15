@@ -1,22 +1,33 @@
-/* Parent container styles (assuming a separate container) */
-.contact {
-  display: flex; /* Enable flexbox */
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Horizontally center content */
-  align-items: center; /* Vertically center content (optional) */
-  min-height: 100vh; /* Optional: Set minimum height for viewport coverage */
-
-  /* Text styles for .contact */
-  font-family: 'ft88-serif', sans-serif;
-  text-align: center;
-  padding: 1rem 2rem; /* Equal left and right padding */
-  white-space: wrap;
-  line-height: 1.5;
+/* Contact CSS (Contact.css) */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 80px; /* Adjust as needed based on header height */
 }
 
-/* Styles for .contact-form */
+
+.contact-content {
+  text-align: center;
+  max-width: 75%;
+  margin-bottom: 20px;
+}
+
+.contact-content h2 {
+  font-size: 2.5vw; /* Adjust heading font size */
+  margin-bottom: 10px; /* Add spacing below heading */
+}
+
+.contact-content p {
+  font-size: 1.2rem; /* Adjust paragraph font size */
+  line-height: 1.6;
+  color: #666; /* Adjust text color */
+  margin-bottom: 20px; /* Add spacing below paragraph */
+}
+
 .contact-form {
-  font-family: 'ft88';
+  font-family: 'ft88'; /* Example font family */
   background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Inner padding with equal left and right */
@@ -51,10 +62,22 @@
   cursor: pointer; /* Indicate clickable behavior */
 }
 
-/* Media queries for responsive adjustments (optional) */
-@media (max-width: 768px) {
-  .contact-form {
-    font-size: 14px; /* Reduce font size for mobile */
-    margin-bottom: 30px; /* Add some spacing below the form on mobile */
-  }
+.contact-form button:hover {
+  background-color: #555; /* Darker background color on hover */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center align icons horizontally */
+  margin-top: 10px; /* Adjust margin as needed */
+}
+
+.social-icons a {
+  color: #333; /* Icon color */
+  font-size: 24px; /* Adjust icon size */
+  margin: 0 10px; /* Adjust spacing between icons */
+}
+
+.social-icons a:hover {
+  color: #555; /* Darker color on hover */
 }

@@ -1,6 +1,6 @@
 /* Hero section styles */
 .hero-section {
-  font-family: 'bzd-pearl', sans-serif;
+  /*font-family: 'bzd-pearl', sans-serif;*/
   position: relative;
   color: #fff;
   padding: 10vw 0; /* Adjust the padding to be 10% of the viewport width */
@@ -8,6 +8,9 @@
   margin: 0;
   overflow: hidden; /* Hide overflowing background */
   background-color: black;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 
 /* Define base font size for the entire document */
@@ -15,23 +18,33 @@ html {
   font-size: 16px; /* Adjust as needed */
 }
 
-/* Font size for the name */
+/* Font size for the name 
 .name {
-  font-size: 5vw; /* Adjust based on the desired scaling */
+  font-size: 5vw; 
 }
+*/
 
 /* Font size for the headline */
 .headline {
-  font-size: 4vw; /* Adjust based on the desired scaling */
+  font-size: 5vw; /* Adjust based on the desired scaling */
   margin-bottom: 2vw; /* Adjust based on the desired spacing */
   width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 
-/* Font size for the subheadline */
-.subheadline {
-  font-size: 1.125rem; /* Adjust based on the desired scaling */
+/* Cursor blink animation */
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Media query for smaller screens (e.g., mobile devices) */

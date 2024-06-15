@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import '../styles/ContactForm.css'; // Import your CSS file
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -35,10 +36,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
+    <div className="contact-form-container">
       {!isSubmitted && (
         <form onSubmit={handleSubmit} className="contact-form">
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">name:</label>
           <input
             type="text"
             id="name"
@@ -48,7 +49,7 @@ const ContactForm = () => {
             required
           />
 
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">email:</label>
           <input
             type="email"
             id="email"
@@ -58,7 +59,7 @@ const ContactForm = () => {
             required
           />
 
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">message:</label>
           <textarea
             id="message"
             name="message"
@@ -67,10 +68,10 @@ const ContactForm = () => {
             required
           />
 
-          <button type="submit">Send Message</button>
+          <button type="submit">submit!</button>
         </form>
       )}
-      {isSubmitted && <p>Thank you for your message! I will get back to you soon.</p>}
+      {isSubmitted && <p className="submission-message">thank you for your message! i will get back to you soon.</p>}
     </div>
   );
 };
