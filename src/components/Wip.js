@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Wip.css'
+import { Link } from 'react-router-dom'; // Assuming you use React Router for navigation
+import '../styles/Wip.css';
 
 const Wip = ({ message = 'work in progress...' }) => {
   const [showCursor, setShowCursor] = useState(true);
@@ -12,9 +13,13 @@ const Wip = ({ message = 'work in progress...' }) => {
     return () => clearInterval(blinkingInterval);
   }, []); // Only run effect on component mount
 
-  return ( 
+  return (
     <div className="wip-container">
       <p className="wip-text">{message}<span style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span></p>
+      <div className="buttons-container">
+        <Link to="/v1" className="wip-button">v1</Link>
+        <Link to="/v2" className="wip-button">v2</Link>
+      </div>
     </div>
   );
 };

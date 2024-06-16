@@ -1,5 +1,6 @@
 /* Hero section styles */
 .hero-section {
+  font-family: 'ft88', sans-serif;
   /*font-family: 'bzd-pearl', sans-serif;*/
   position: relative;
   color: #fff;
@@ -26,7 +27,7 @@ html {
 
 /* Font size for the headline */
 .headline {
-  font-size: 5vw; /* Adjust based on the desired scaling */
+  font-size: 3.5vw; /* Adjust based on the desired scaling */
   margin-bottom: 2vw; /* Adjust based on the desired spacing */
   width: 90%;
   margin: 0 auto;

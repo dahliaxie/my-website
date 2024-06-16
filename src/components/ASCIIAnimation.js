@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import '../styles/Ascii.css';
+import React, { useRef, useState, useEffect } from 'react';
 import loadingGif from '../videos/loading2.gif';
 
 const ASCIIAnimation = ({ videoPath, fps, charsWidth, color }) => {
@@ -7,17 +6,20 @@ const ASCIIAnimation = ({ videoPath, fps, charsWidth, color }) => {
   const asciiRef = useRef(null);
   const pixels = "@%#*+=-:;~<>^()_{}|\\/?,.`\"";
   const [frames, setFrames] = useState([]);
-  const [loading, setLoading] = useState(true); // Track loading state
-  const [processedFrames, setProcessedFrames] = useState(0); // Track the number of processed frames
-  const [fadeIn, setFadeIn] = useState(false); // Track whether to fade in the ASCII animation
+  const [loading, setLoading] = useState(true);
+  const [processedFrames, setProcessedFrames] = useState(0);
 
-  const generateAsciiFrames = useCallback(async () => {
+  const generateAsciiFrames = async () => {
     const video = videoRef.current;
-    let localFrames = [];
     const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d', { willReadFrequently: true });
+    const context = canvas.getContext('2d');
     const frameInterval = 1 / fps;
     const totalFrames = Math.ceil(video.duration * fps);
+    const asciiWidth = charsWidth;
+    const localFrames = [];
+
+    canvas.width = asciiWidth;
+    canvas.height = Math.floor(asciiWidth / (video.videoWidth / video.videoHeight));
 
     for (let i = 0; i < totalFrames; i++) {
       const currentTime = i * frameInterval;
@@ -30,52 +32,51 @@ const ASCIIAnimation = ({ videoPath, fps, charsWidth, color }) => {
         };
       });
 
-      const asciiWidth = charsWidth;
-      const aspectRatio = video.videoWidth / video.videoHeight;
-      const asciiHeight = Math.floor(asciiWidth / (2 * aspectRatio));
-
-      canvas.width = asciiWidth;
-      canvas.height = asciiHeight;
-      console.log("canvas width = "+ canvas.width);
-      console.log("canvas height = "+canvas.height);
       context.drawImage(video, 0, 0, canvas.width, canvas.height);
-      const imgData = context.getImageData(0, 0, canvas.width, canvas.height);
-      let asciiString = '';
-
-      for (let y = 0; y < canvas.height; y++) {
-        for (let x = 0; x < canvas.width; x++) {
-          const index = 4 * (y * canvas.width + x);
-          const [r, g, b] = imgData.data.slice(index, index + 3);
-          const gray = Math.round(0.299 * r + 0.587 * g + 0.114 * b);
-          const char = pixels[Math.floor((gray / 255) * (pixels.length - 1))];
-          asciiString += char;
-        }
-        asciiString += '\n';
-      }
-
+      const asciiString = convertToASCII(context.getImageData(0, 0, canvas.width, canvas.height), asciiWidth);
       localFrames.push(asciiString);
-      setProcessedFrames(i + 1); // Update the number of processed frames
+      setProcessedFrames(i + 1);
     }
 
     setFrames(localFrames);
-    setLoading(false); // Set loading to false when frames are loaded
-    setFadeIn(true); // Trigger fade in animation
-  }, [charsWidth, fps, pixels]);
+    setLoading(false);
+  };
 
-  const generateCharsAnimation = useCallback(() => {
+  const convertToASCII = (imgData, asciiWidth) => {
+    let asciiString = '';
+    const pixelData = imgData.data;
+    const pixelsPerChar = 4; // RGBA
+
+    for (let y = 0; y < imgData.height; y++) {
+      for (let x = 0; x < imgData.width; x++) {
+        const index = (y * imgData.width + x) * pixelsPerChar;
+        const r = pixelData[index];
+        const g = pixelData[index + 1];
+        const b = pixelData[index + 2];
+        const brightness = Math.round(0.299 * r + 0.587 * g + 0.114 * b);
+        const char = pixels[Math.floor((brightness / 255) * (pixels.length - 1))];
+        asciiString += char;
+      }
+      asciiString += '\n';
+    }
+
+    return asciiString;
+  };
+
+  const generateCharsAnimation = () => {
     let currentFrame = 0;
     const totalFrames = frames.length;
 
     const animate = () => {
-      if (totalFrames > 0) {
+      if (asciiRef.current && totalFrames > 0) {
         asciiRef.current.innerText = frames[currentFrame];
         currentFrame = (currentFrame + 1) % totalFrames;
-        setTimeout(animate, 1000 / fps);
+        requestAnimationFrame(animate); // Use requestAnimationFrame for smoother animation
       }
     };
 
     animate();
-  }, [frames, fps]);
+  };
 
   useEffect(() => {
     const video = videoRef.current;
@@ -89,25 +90,24 @@ const ASCIIAnimation = ({ videoPath, fps, charsWidth, color }) => {
     return () => {
       video.removeEventListener('loadeddata', handleVideoLoad);
     };
-  }, [generateAsciiFrames]);
+  }, []);
 
   useEffect(() => {
     if (frames.length > 0) {
       generateCharsAnimation();
     }
-  }, [frames, generateCharsAnimation]);
+  }, [frames]);
 
   return (
-    <div>
-      {loading ? (
+    <div className="ascii-container">
+      <div className="ascii-body" ref={asciiRef}></div>
+      {loading && (
         <div className="loading">
           <img src={loadingGif} alt="Loading..." />
           {Math.ceil(videoRef.current?.duration * fps) ? (
-            <p>Processing Frames: {processedFrames}/{Math.ceil(videoRef.current?.duration * fps)}</p>
-          ) : (<p></p>)}
-        </div> // Display loading icon while frames are loading
-      ) : (
-        <pre ref={asciiRef} className="ascii-body" />
+            <p>processing frames: {processedFrames}/{Math.ceil(videoRef.current?.duration * fps)}</p>
+          ) : null}
+        </div>
       )}
       <video ref={videoRef} src={videoPath} crossOrigin="anonymous" style={{ display: 'none' }} />
     </div>

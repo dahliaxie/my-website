@@ -1,27 +1,50 @@
 .wip-container {
-    text-align: center; /* Maintain horizontal centering */
-    min-height: 100vh; /* Optional: Set minimum height for viewport coverage */
-    margin-top: 20%; /* Add space at the top (adjust as needed) */
-  }
-  
-  
+  text-align: center; /* Maintain horizontal centering */
+  min-height: 100vh; /* Optional: Set minimum height for viewport coverage */
+  margin-top: 10%; /* Add space at the top (adjust as needed) */
+}
+
+.wip-text {
+  font-family: 'bzd-bubble', sans-serif;
+  font-size: 5vw; /* Adjust font size as desired */
+  color: #656565; /* Text color (optional) */
+}
+
+.wip-text span { /* Styling for the blinking cursor */
+  animation: blink 500ms steps(1, none) infinite; /* Adjust blinking speed if needed */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center; /* Center align the buttons horizontally */
+  gap: 1rem; /* Space between buttons */
+}
+
+.wip-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #333; /* Example background color */
+  color: white; /* Text color */
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+  /* Optional: Adjust font size and padding */
+  font-size: 1rem;
+}
+
+.wip-button:hover {
+  background-color: #555; /* Darker shade of the background color */
+  cursor: pointer; /* Optional: Change cursor to pointer on hover */
+}
+
+@keyframes blink {
+  from, to { visibility: hidden; }
+  50% { visibility: visible; }
+}
+
+@media (max-width: 768px) {
   .wip-text {
-    font-family: 'bzd-bubble', sans-serif;
-    font-size: 5vw; /* Adjust font size as desired */
-    color: #656565; /* Text color (optional) */
+    font-size: 8vw; /* Adjust font size as desired */
   }
-  
-  .wip-text span { /* Styling for the blinking cursor */
-    animation: blink 500ms steps(1, none) infinite; /* Adjust blinking speed if needed */
-  }
-  
-  @keyframes blink {
-    from, to { visibility: hidden; }
-    50% { visibility: visible; }
-  }
-  
-  @media (max-width: 768px) {
-    .wip-text {
-      font-size: 8vw; /* Adjust font size as desired */
-    }
-  }
+}

@@ -1,7 +1,7 @@
 /* General styles */
-.experience-page {
+.about-page {
   font-family: 'roboto', sans-serif;
-  padding: 4rem 2rem 1rem 2rem;
+  padding: 1rem 2rem 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,7 @@
   margin-bottom: 5%;
 }
 
-.experience-text {
+.about-text {
   font-size: 2.5vw;
   line-height: 1.5;
   color: white;
@@ -18,17 +18,17 @@
   transition: opacity 1s ease-in-out;
 }
 
-.experience-text.visible {
+.about-text.visible {
   opacity: 1; /* Fade-in effect */
 }
 
-.experience-text a {
+.about-text a {
   color: white;
   border-bottom: 1px solid inherit;
   padding-bottom: 0;
 }
 
-.experience-text a:hover {
+.about-text a:hover {
   border-bottom-color: #9aadc2;
   color: #91bdec;
   transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
