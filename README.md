@@ -9,6 +9,4 @@
       /media
     index.html
   </code>
-
-  <p> directions : npm run build, npm run deploy, replace static folder new build/static, double check that js and css references are correct, then push</p>
 </pre>
