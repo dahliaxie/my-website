@@ -1,3 +1,4 @@
+@import './fonts.css';
 .wip-container {
   text-align: center; /* Maintain horizontal centering */
   min-height: 100vh; /* Optional: Set minimum height for viewport coverage */

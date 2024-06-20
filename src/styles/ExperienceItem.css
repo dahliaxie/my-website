@@ -1,4 +1,7 @@
-.experience-item {
+.experience {
+  margin-top:80px;
+
+}.experience-item {
   margin-bottom: 2rem; /* Add space between experience entries */
   padding: 1rem;
   color: white;

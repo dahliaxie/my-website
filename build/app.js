@@ -9,6 +9,7 @@ import Experience from './pages/Experience';
 import Contact from './pages/Contact'
 import Sample from './pages/Sample'
 import Test from './pages/Test.js';
+import TestingPage from './components/TestingPage.js';
 const App = () => {
   return (
     <Router>
@@ -21,11 +22,9 @@ const App = () => {
           <Route path="/v1" element={<Sample />} />
           <Route path="/v2" element={<Test />} />
           <Route path="/" element={<Home />} />
+          <Route path="/v0" element={<TestingPage/>}/>
           {/* Add more routes for other pages */}
         </Routes>
-
-
-        <FooterBanner />
       </div>
     </Router>
   );
