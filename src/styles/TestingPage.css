@@ -1,0 +1,117 @@
+.TestingPage {
+    min-height: 100vh; /* Set minimum height for full viewport coverage */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Align footer at bottom */
+    overflow: hidden; /* Hide overflowing Ascii images (optional) */
+    position: relative; /* Ensure absolute positioning of child elements */
+  }
+  
+  /* Container for ASCII images */
+  .ascii-box {
+    position: absolute; /* Position containers absolutely */
+    width: fit-content; /* Allow container to adjust to image width */
+    animation: float 15s linear infinite; /* Continuous horizontal movement */
+    left: -20vw;
+    z-index: 1;
+  }
+  
+  /* Keyframes for the float animation */
+  @keyframes float {
+    0% {
+      transform: translateX(0vw); /* Start off-screen */
+    }
+    100% {
+      transform: translateX(120vw); /* Move across the entire screen */
+    }
+  }
+  
+  /* ASCII image styles */
+  .ascii-image {
+    background-color: transparent;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px; /* Add spacing between images vertically */
+  }
+  
+  .ascii-image h3 {
+    margin-bottom: 5px;
+  }
+  
+  .ascii-image pre {
+    font-family: monospace;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .ascii-image a {
+    /* Your styles for the link */
+  }
+  .caption-box {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px; /* Decreased padding for smaller background */
+    background-color: rgba(255, 0, 0, 1); /* Solid red background */
+    filter:blur(1.2px);
+    border-radius: 30px; /* Adjusted border radius for slightly smaller rounded edges */
+    width: fit-content; /* Adjust width based on content */
+    max-width: 80%; /* Set maximum width */
+    box-shadow: 0 0 20px 20px rgba(255, 0, 0, 1); /* Adjusted box-shadow for red glow */
+  
+    /* Additional properties to create the fade effect */
+    overflow: hidden; /* Clip the shadow to prevent it from extending beyond the border */
+  }
+  
+  .caption-box::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Adjusted position to keep the background within the border radius */
+    left: -5px; /* Adjusted position to keep the background within the border radius */
+    right: -5px; /* Adjusted position to keep the background within the border radius */
+    bottom: -5px; /* Adjusted position to keep the background within the border radius */
+    background: rgba(255, 0, 0, 1); /* Adjust the opacity for the center background */
+    border-radius: 30px; /* Same as border-radius of .caption-box */
+    z-index: -1; /* Place gradient behind the content */
+    filter: blur(10px); /* Blur the background slightly to blend with the box shadow */
+  }
+  
+  
+  
+  .caption-container {
+    text-align: center; /* Center text */
+    z-index: 2; /* Ensure it's above other elements */
+    color: white; /* Text color */
+
+  }
+  
+  
+  /* TestingPage.css */
+
+/* Styles for the toggle button */
+.toggle-button {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+  }
+  
+  .toggle-button button {
+    padding: 10px 20px;
+    background-color: rgb(75, 75, 75); /* Blue background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-button button:hover {
+    background-color: rgb(40, 40, 40); /* Darker blue on hover */
+  }
+  

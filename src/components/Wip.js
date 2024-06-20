@@ -17,8 +17,8 @@ const Wip = ({ message = 'work in progress...' }) => {
     <div className="wip-container">
       <p className="wip-text">{message}<span style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span></p>
       <div className="buttons-container">
+      <Link to="/v0" className="wip-button">v0</Link>
         <Link to="/v1" className="wip-button">v1</Link>
-        <Link to="/v2" className="wip-button">v2</Link>
       </div>
     </div>
   );
