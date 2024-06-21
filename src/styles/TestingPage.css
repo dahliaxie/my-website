@@ -1,3 +1,5 @@
+/* TestingPage.css */
+
 .TestingPage {
     min-height: 100vh; /* Set minimum height for full viewport coverage */
     display: flex;
@@ -11,18 +13,18 @@
   .ascii-box {
     position: absolute; /* Position containers absolutely */
     width: fit-content; /* Allow container to adjust to image width */
-    animation: float 15s linear infinite; /* Continuous horizontal movement */
-    left: -20vw;
+    animation: float linear infinite; /* Continuous horizontal movement */
+    left: -20vw; /* Initial position off-screen */
     z-index: 1;
   }
   
   /* Keyframes for the float animation */
   @keyframes float {
     0% {
-      transform: translateX(0vw); /* Start off-screen */
+      transform: translateX(-25vw); /* Start off-screen */
     }
     100% {
-      transform: translateX(120vw); /* Move across the entire screen */
+      transform: translateX(125vw); /* Move across the entire screen */
     }
   }
   
@@ -32,6 +34,9 @@
     display: inline-block;
     margin-right: 20px;
     margin-bottom: 20px; /* Add spacing between images vertically */
+    max-width: 100%; /* Ensure images scale down to fit their container */
+    height: auto; /* Maintain aspect ratio */
+    font-size: 1em; /* Default font size */
   }
   
   .ascii-image h3 {
@@ -44,11 +49,9 @@
     border: none;
     padding: 0;
     margin: 0;
+    font-size: 1em; /* Default font size */
   }
   
-  .ascii-image a {
-    /* Your styles for the link */
-  }
   .caption-box {
     z-index: 2;
     position: absolute;
@@ -57,7 +60,7 @@
     transform: translate(-50%, -50%);
     padding: 10px; /* Decreased padding for smaller background */
     background-color: rgba(255, 0, 0, 1); /* Solid red background */
-    filter:blur(1.2px);
+    filter: blur(1.2px);
     border-radius: 30px; /* Adjusted border radius for slightly smaller rounded edges */
     width: fit-content; /* Adjust width based on content */
     max-width: 80%; /* Set maximum width */
@@ -81,27 +84,24 @@
   }
   
   
-  
   .caption-container {
     text-align: center; /* Center text */
     z-index: 2; /* Ensure it's above other elements */
     color: white; /* Text color */
-
+    font-size: 1.2em; /* Adjusted font size for captions */
   }
   
-  
-  /* TestingPage.css */
-
-/* Styles for the toggle button */
-.toggle-button {
+  /* Styles for the toggle button */
+  .toggle-button {
     position: fixed;
-    bottom: 70px;
-    right: 30px;
+    bottom: 20px; /* Adjusted bottom position */
+    right: 20px; /* Adjusted right position */
+    z-index: 3;
   }
   
   .toggle-button button {
     padding: 10px 20px;
-    background-color: rgb(75, 75, 75); /* Blue background color */
+    background-color: rgb(75, 75, 75); /* Gray background color */
     color: white;
     border: none;
     cursor: pointer;
@@ -112,6 +112,44 @@
   }
   
   .toggle-button button:hover {
-    background-color: rgb(40, 40, 40); /* Darker blue on hover */
+    background-color: rgb(40, 40, 40); /* Darker gray on hover */
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 1200px) {
+    .ascii-image {
+      font-size: 0.5em; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .ascii-box {
+      left: -30vw; /* Further adjust the starting position */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ascii-box {
+      left: -35vw; /* Adjust starting position for tablet-sized screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .ascii-box {
+      left: -40vw; /* Adjust starting position for mobile screens */
+    }
+  
+    .caption-box {
+      padding: 0px; /* Decrease padding further for smaller screens */
+    }
+  
+    .caption-container {
+      font-size: .8em; /* Adjust font size for captions on smaller screens */
+    }
+  
+    .toggle-button {
+      bottom: 10px; /* Adjust button position for smaller screens */
+      right: 10px; /* Adjust button position for smaller screens */
+    }
   }
   
