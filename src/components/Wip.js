@@ -13,11 +13,12 @@ const Wip = ({ message = 'work in progress...' }) => {
     return () => clearInterval(blinkingInterval);
   }, []); // Only run effect on component mount
 
+  //<Link to="/v0" className="wip-button">v0</Link> comment out v0 for now
   return (
     <div className="wip-container">
       <p className="wip-text">{message}<span style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span></p>
       <div className="buttons-container">
-      <Link to="/v0" className="wip-button">v0</Link>
+      
         <Link to="/v1" className="wip-button">v1</Link>
       </div>
     </div>

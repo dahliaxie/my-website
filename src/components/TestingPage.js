@@ -87,7 +87,6 @@ function TestingPage() {
 
   const lines = [
     'unplug the servers, let the algorithm rest',
-    'purify my heart, sanctify this eternal waste',
     'as my heart pumps blood through my body..',
     '..i waste time on vacant thoughts',
     'a barrier to my reality',
